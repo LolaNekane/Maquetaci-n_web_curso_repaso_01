@@ -2,12 +2,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
-    <link rel="stylesheet" href="./assets/fonts/poppins/poppins.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/fonts/poppins/poppins.css"/>
+    <link rel="stylesheet" href="./assets/css/reset.css"/>
     <link rel="stylesheet" href="./assets/css/styles.css"/>
-    <link rel="stylesheet" href="./assets/css/scroll.css">
+    <link rel="stylesheet" href="./assets/css/scroll.css"/>
+    <link rel="stylesheet" href="./assets/css/responsive.css"/>
+
+    <!-- Script Js -->
+    <script src="./assets/js/menu.js" defer></script>
+
     <title>Portafolio curso</title>
 </head>
     <body>
@@ -107,6 +112,12 @@
 
                 </section>
             </aside>
+
+            <!-- Menu responsive -->
+            <div class="layout__menu-toogle">
+                <i class="menu-toggle__icon fa-solid fa-bars"></i>
+                <i class="menu-toggle__icon fa-solid fa-xmark"></i>
+            </div>
 
             <!-- Contenido principal -->
             <main class="layout__content">
@@ -324,9 +335,7 @@
                                     <span class="certificate__date">25 de Enero 2025</span>
                                 </div>
                             </article>
-                        </section>
-
-                         <section class="certificates__container">
+                            
                             <article class="certificates__certificate">
                                 <div class="certificate__logo">
                                     <img src="assets/img/certificado-1.png" alt="" class="certificate__image">

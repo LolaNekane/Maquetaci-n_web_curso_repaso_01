@@ -11,11 +11,13 @@
     --color--border-reviews: #E5E6E7;
     --color-company: #A5A6A7;
     --color--background-certificate: #f5f5f5;
+    --color--background-contact: #FCFCFC;
 }
 
 /*ESTILOS GENERALES*/
 html {
-    font-size: 10px;
+    font-size: 62.5%; /*Para hacer la web mas accesible*/  /*Equivale a font-size: 10px;*/
+
 }
 
 body {
@@ -207,7 +209,7 @@ body{
 /*MENÚ NAVEGACIÓN LATERAL*/
 .layout__menu {
     top: 0;
-    right: -130px;
+    right: -12.5rem;
     min-width: 11rem;
     display: block;
     position: absolute;
@@ -267,7 +269,8 @@ body{
 .content__about,
 .content__resume,
 .content__portfolio,
-.content__blog {
+.content__blog,
+.content__contact {
     height: 100%;
     min-height: 100%;
     padding: 6rem;
@@ -279,7 +282,8 @@ body{
 .about__header,
 .resume__header,
 .portfolio__header,
-.blog__header {
+.blog__header,
+.contact__header {
     margin-bottom: 4.5rem;
     display: inline-block;
 }
@@ -287,7 +291,8 @@ body{
 .about__title,
 .resume__title,
 .portfolio__title,
-.blog__title{
+.blog__title,
+.contact__title{
     font-size: 3.2rem;
     position: relative;
 }
@@ -295,13 +300,14 @@ body{
 .about__title::after,
 .resume__title::after,
 .portfolio__title::after,
-.blog__title::after {
+.blog__title::after,
+.contact__title::after {
     content: "";
-    top: 20px;
-    right: -25px;
+    top: 2rem;
+    right: -2.5rem;
     background-image: -webkit-repeating-radial-gradient(center center, #fdb39a52, #fdb39a52 1px, transparent 0%, transparent 100%);
-    width: 50px; /*para que algan los puntos hay que poner el width, el height y el background size*/
-    height: 30px;
+    width: 5rem; /*para que algan los puntos hay que poner el width, el height y el background size*/
+    height: 3rem;
     background-size: 6px 6px;
     position: absolute;
 }
@@ -355,7 +361,8 @@ body{
 .clients__header,
 .prices__header,
 .extra__header,
-.resume__subheader {
+.resume__subheader,
+.contact__form-header {
     display: inline-block;
     padding-right: 1.2rem;
     margin-bottom: 2.5rem;
@@ -367,7 +374,8 @@ body{
 .clients__title,
 .prices__title,
 .extra__title,
-.resume__subtitle {
+.resume__subtitle,
+.form-header__title {
     font-size: 2.1rem;
 }
 
@@ -376,13 +384,14 @@ body{
 .clients__title::after,
 .prices__title::after,
 .extra__title::after,
-.resume__subtitle::after  {
+.resume__subtitle::after,
+.form-header__title::after {
     content: "";
-    top: 15px;
-    right: 0px;
+    top: 1.5rem;
+    right: 0;
     background-image: -webkit-repeating-radial-gradient(center center, #fdb39a52, #fdb39a52 1px, transparent 0%, transparent 100%);
-    width: 30px; /*para que algan los puntos hay que poner el width, el height y el background size*/
-    height: 20px;
+    width: 3rem; /*para que salgan los puntos hay que poner el width, el height y el background size*/
+    height: 2rem;
     background-size: 6px 6px;
     position: absolute;
 }
@@ -497,7 +506,7 @@ body{
 }
 
 .clients__image {
-    width: 145px;
+    width: 14.5rem;
     padding: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -693,7 +702,7 @@ body{
 .timeline__divider {
     top: 0;
     left: 30%;
-    bottom: -18px;
+    bottom: -1.8rem;
     width: 1px;
     background-color: var(--color-background);
     position: absolute;
@@ -1024,4 +1033,147 @@ body{
 .article__title {
     font-size: 1.8rem;
     margin-top: 0.5rem;
+}
+
+/*PAGINA CONTACTO*/
+.contact__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact__info {
+    flex-basis: 33%;
+    padding: 0 1.5rem;
+}
+
+.contact__data{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 2rem 1rem;
+    background-color: var(--color--background-contact);
+    border: 0.1rem solid var(--color--border-reviews);
+}
+
+.contact__icon {
+    color: var(--color-secondary);
+    font-size: 3.3rem;
+}
+
+.contact__subtitle {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact__from-box {
+    flex-basis: 66%;
+    padding: 0 1.5rem;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: row;
+}
+
+.form__left {
+    flex-basis: 47%;
+    margin-right: 1.5rem;
+}
+
+.form__group {
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.form__input {
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    border: 0.2rem solid var(--color--border-reviews);
+    border-radius: 0.5rem;
+    outline: none;
+    box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 0.08);
+    background-color: transparent;
+    padding: 1rem 1.2rem;
+    width: 100%;
+    height: 4.2rem;
+    display: block;
+    position: relative;
+}
+
+.form__input:focus{
+    border: 0.2rem solid var(--color-secondary);
+}
+
+.form__label {
+    color: var(--color-company);
+    top: 1rem;
+    left: 1.5rem;
+    position: absolute;
+    transition: all 300ms ease-in-out;
+    z-index: -1;
+}
+
+.form__input:focus~label { /*~ para indicar el elemento hermano, los siguientes al input, que es el label*/
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+    top: -2rem;
+    left: 0;
+    z-index: 1;
+}
+
+.form__input:focus::-webkit-input-placeholder{  /*Para ocultar el placeholder en chrome*/
+    color: transparent; 
+}
+.form__input:focus::-moz-placeholder{  /*Para ocultarlo en mozilla*/
+    color: transparent; 
+}
+
+.form__right {
+    flex-basis: 50%;
+}
+
+.form__group--textarea {
+    height: 100%;
+}
+.form__input--textarea {
+    height: 100%;
+    width: 100%;
+    resize: none;
+}
+
+.form__button {
+    color: var(--color-title);
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border: 0.2rem solid var(--color-secondary);
+    border-radius: 3rem;
+    background-color: var(--color-primary);
+    box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form__button:hover {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+.contact__map {
+    width: 100%;
+    min-height: 15rem;
+    margin-bottom: 3.5rem;
+    overflow: hidden;
+}
+
+.contact__iframe {
+    width: 100%;
+    height: 14rem;
+}
+
+@media (height <= 723px), screen and (orientation: landscape) {
+    .user-info__footer {
+        margin-bottom: 2rem;
+        bottom: 0;
+        position: static;
+    }
 }
